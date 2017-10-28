@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心-我的收藏-小说收藏页面</title>
+    <link rel="stylesheet" type="text/css" href="../mine.css" />
+</head>
+<body>
+<article class="coll-article">
+    <div>
+        <input type="text" placeholder="请输入关键字（小说名，作者名等）" name="search_article" id="search_article" />
+        <input type="button" value="查询" id="search_art_btn" />
+        <input type="button" value="批量删除" id="delete_many" />
+        <input type="button" value="按浏览量排序" id="pageviews" />
+    </div>
+    <table class="novel-list" id="novel_list">
+        <thead class="thead">
+        <tr>
+            <td>
+                <input type="checkbox" id="check_all" class="check-box"/>
+            </td>
+            <td>类型s</td>
+            <td>小说名</td>
+            <td>作者名</td>
+            <td>状态</td>
+            <td>字数</td>
+            <td>浏览量</td>
+            <td>更新时间</td>
+            <td>操作</td>
+        </tr>
+        </thead>
+        <tbody class="tbody">
+        <tr>
+            <td>
+                <input type="checkbox" class="check-box"/>
+            </td>
+            <td>哈哈</td>
+            <td>《小说名》</td>
+            <td>颓</td>
+            <td>已完结</td>
+            <td>40万</td>
+            <td>1001</td>
+            <td>2017/08/22 19:30</td>
+            <td>
+                <span class="delete-collect">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" class="check-box"/>
+            </td>
+            <td>言情</td>
+            <td>《小说名》</td>
+            <td>颓</td>
+            <td>连载中</td>
+            <td>20万</td>
+            <td>1000</td>
+            <td>2017/08/22 18:00</td>
+            <td>
+                <span class="delete-collect">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" class="check-box"/>
+            </td>
+            <td>言情</td>
+            <td>《小说名》</td>
+            <td>颓</td>
+            <td>连载中</td>
+            <td>20万</td>
+            <td>1200</td>
+            <td>2017/08/22 18:00</td>
+            <td>
+                <span class="delete-collect">删除</span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</article>
+<script type="text/javascript" src="mine_collection.js"></script>
+</body>
+</html>

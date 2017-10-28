@@ -1,0 +1,34 @@
+form{
+  width: 80%;
+  margin: 0 auto;
+}
+fieldset{
+  display:inline-block;
+  width:40%;
+  float:left;
+  margin:20px;
+}
+.button{
+  clear: both;
+  width: 100px;
+  margin:0 auto;
+}
+input.invalid{
+  background-color: #ff9;
+  border: 2px red inset;
+}
+.test{
+  box-sizing:border-box;
+  /*
+  content-box:宽度和高度分别应用到元素的内容框
+  border-box:设置的宽度是指包含边框和内边距的宽度
+
+   */
+  width:100px;
+  padding:10px;
+  background-color:red;
+  background-clip:content-box;
+  /*
+background-clip:规定背景的绘制区域，它可以是border-box,content-box,padding-box
+  */
+}

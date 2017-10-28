@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+<header>
+    <nav class="head-nav">
+        <a href="../login/login.html">登录</a>|
+        <a href="../register/register.html">注册</a>
+        <a href="#">我的</a>
+    </nav>
+    <div class="website-name"><h2>练练网</h2></div>
+    <img src="../img/banner.png" class="image">
+    <div class="header-search"><input type="search" placeholder="输入关键词" class="search" id="search">
+        <input type="button" value="搜索" class="button" id="search_btn">
+        <ul class="fuzz-match">
+            <li><a href="#">测试用javascript</a></li>
+            <li><a href="#">测试用html</a></li>
+            <li><a href="#">测试用css</a></li>
+            <li><a href="#">测试用react</a></li>
+            <li><a href="#" id="fm_close">X</a></li>
+        </ul>
+    </div>
+
+</header>
+<article>
+    <nav class="partition">
+    <ul>
+        <li><a href="#">首</a></li>
+        <li><a href="#">图</a></li>
+        <li><a href="#">文</a></li>
+        <li><a href="#">影</a></li>
+        <li><a href="#">乐</a></li>
+        <li><a href="#">聊</a></li>
+        <li><a href="#">榜</a></li>
+    </ul>
+    </nav>
+    <section class="clearfix">
+        <div id="suff_imgs">
+            <div id="img_list" style="left:0;">
+                <img src="../img/suffling/1.png"  alt="1">
+                <img src="../img/suffling/2.png"  alt="2">
+                <img src="../img/suffling/3.png"  alt="3">
+            </div>
+            <div id="img_dots">
+                <span index="1" class="on"></span>
+                <span index="2"></span>
+                <span index="3"></span>
+            </div>
+            <a href="javascipt: ;" id="prev" class="arrow">&lt;</a>
+            <a href="javascipt: ;" id="next" class="arrow">&gt;</a>
+        </div>
+        <div class="top3">
+            <img src="../img/sky.png" class="post-img" alt="top1的封面图片"/>
+            <p class="long-p">此处放置的是榜单模块的内容，点击下方的更多能够查看榜单</p>
+        </div>
+        <div class="top3">
+            <img src="../img/sky.png" class="post-img" alt="top2的封面图片"/>
+            <p class="long-p">当类为top3的元素中不包含任何值时，背景颜色不会生效</p>
+        </div>
+        <div class="top3">
+            <img src="../img/sky.png" class="post-img" alt="top3的封面图片"/>
+            <p class="long-p">当类为top3的元素中不包含任何值时，背景颜色不会生效</p>
+        </div>
+        <p class="browse-more"><a href="#">更多>></a></p>
+    </section>
+    <section id="pictures">
+        <h1>图</h1>
+        <span class="trang"></span>
+        <div class="subsection">
+            <h2>原创</h2>
+            <div class="picture-post">
+                <img src="../img/pictures/post.png" alt="图集封面" class="post-picture"/>
+                <p class="long-p">这个图集的简介，这个图集的简介</p>
+                <div class="picture-describe">
+                    <div class="describe-content">
+                        <p>这是图集的标题</p>
+                        <p>作者：Una</p>
+                        <p>简介：这个图集的简介，这个图集的简介</p>
+                        <p>发布时间：2017/8/23</p>
+                    </div>
+                </div>
+            </div>
+            <p class="browse-more"><a href="#">更多>></a></p>
+        </div>
+        <div class="subsection">
+        <h2>同人</h2>
+        <div class="picture-post">
+            <img src="../img/pictures/post.png" alt="图集封面" class="post-picture"/>
+            <p class="long-p">这个图集的简介，这个图集的简介</p>
+            <div class="picture-describe">
+                <div class="describe-content">
+                    <p>这是图集的标题</p>
+                    <p>作者：Una</p>
+                    <p>简介：这个图集的简介，这个图集的简介</p>
+                    <p>发布时间：2017/8/23</p>
+                </div>
+            </div>
+        </div>
+        <p class="browse-more"><a href="#">更多>></a></p>
+    </div>
+        <div class="subsection">
+            <h2>萌系</h2>
+            <div class="picture-post">
+                <img src="../img/pictures/post.png" alt="图集封面" class="post-picture"/>
+                <p class="long-p">这个图集的简介，这个图集的简介</p>
+                <div class="picture-describe">
+                    <div class="describe-content">
+                        <p>这是图集的标题</p>
+                        <p>作者：Una</p>
+                        <p>简介：这个图集的简介，这个图集的简介</p>
+                        <p>发布时间：2017/8/23</p>
+                    </div>
+                </div>
+            </div>
+            <p class="browse-more"><a href="#">更多>></a></p>
+        </div>
+        <div class="subsection">
+            <h2>写实</h2>
+            <div class="picture-post">
+                <img src="../img/pictures/post.png" alt="图集封面" class="post-picture"/>
+                <p class="long-p">这个图集的简介，这个图集的简介</p>
+                <div class="picture-describe">
+                    <div class="describe-content">
+                        <p>这是图集的标题</p>
+                        <p>作者：Una</p>
+                        <p>简介：这个图集的简介，这个图集的简介</p>
+                        <p>发布时间：2017/8/23</p>
+                    </div>
+                </div>
+            </div>
+            <p class="browse-more"><a href="#">更多>></a></p>
+        </div>
+        <div class="subsection">
+            <h2>故事</h2>
+            <div class="picture-post">
+                <img src="../img/pictures/post.png" alt="图集封面" class="post-picture"/>
+                <p class="long-p">这个图集的简介，这个图集的简介</p>
+                <div class="picture-describe">
+                    <div class="describe-content">
+                        <p>这是图集的标题</p>
+                        <p>作者：Una</p>
+                        <p>简介：这个图集的简介，这个图集的简介</p>
+                        <p>发布时间：2017/8/23</p>
+                    </div>
+                </div>
+            </div>
+            <p class="browse-more"><a href="#">更多>></a></p>
+        </div>
+        <p class="browse-more"><a href="#">更多>></a></p>
+    </section>
+    <section>
+        <h1>文</h1>
+        <span class="trang"></span>
+        <div class="subsection">
+            <h2>现代</h2>
+            <ul class="novel-list">
+                <li>
+                    <ul class="novel-describe clearfix">
+                        <li>
+                            <span title="《书名书名书名书名书名书名书名》" class="w120">
+                                <a href="#">《书名书名书名书名书名书名书名》</a></span>
+                        </li>
+                        <li>
+                            <span class="w50" title="作者名">作者名</span>
+                        </li>
+                        <li>
+                            <span class="w50 novel-status">连载中</span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="novel-describe clearfix">
+                        <li>
+                            <span title="《书名书名书名书名书名书名书名》" class="w120">
+                                <a href="#">《书名书名书名书名书名书名书名》</a></span>
+                        </li>
+                        <li>
+                            <span class="w50" title="很长的作者名">很长的作者名</span>
+                        </li>
+                        <li>
+                            <span class="w50 novel-status">连载中</span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="novel-describe clearfix">
+                        <li>
+                            <span title="《书名书名书》" class="w120">
+                                <a href="#">《书名书名书》</a></span>
+                        </li>
+                        <li>
+                            <span class="w50" title="很长的作者名">很长的作者名</span>
+                        </li>
+                        <li>
+                            <span class="w50 novel-status">已完结</span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="novel-describe clearfix">
+                        <li>
+                            <span title="《书名》" class="w120">
+                                <a href="#">《书名》</a></span>
+                        </li>
+                        <li>
+                            <span class="w50" title="作者名">作者名</span>
+                        </li>
+                        <li>
+                            <span class="w50 novel-status">已完结</span>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <p class="browse-more"><a href="#">更多>></a></p>
+        </div>
+        <div class="subsection">
+            <h2>武侠</h2>
+            <ul class="novel-list">
+                <li>
+                    <ul class="novel-describe clearfix">
+                        <li>
+                            <span title="《书名书名书名书名书名书名书名》" class="w120">
+                                <a href="#">《书名书名书名书名书名书名书名》</a></span>
+                        </li>
+                        <li>
+                            <span class="w50" title="作者名">作者名</span>
+                        </li>
+                        <li>
+                            <span class="w50 novel-status">连载中</span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="novel-describe clearfix">
+                        <li>
+                            <span title="《书名书名书名书名书名书名书名》" class="w120">
+                                <a href="#">《书名书名书名书名书名书名书名》</a></span>
+                        </li>
+                        <li>
+                            <span class="w50" title="很长的作者名">很长的作者名</span>
+                        </li>
+                        <li>
+                            <span class="w50 novel-status">连载中</span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="novel-describe clearfix">
+                        <li>
+                            <span title="《书名书名书》" class="w120">
+                                <a href="#">《书名书名书》</a></span>
+                        </li>
+                        <li>
+                            <span class="w50" title="很长的作者名">很长的作者名</span>
+                        </li>
+                        <li>
+                            <span class="w50 novel-status">已完结</span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="novel-describe clearfix">
+                        <li>
+                            <span title="《书名》" class="w120">
+                                <a href="#">《书名》</a></span>
+                        </li>
+                        <li>
+                            <span class="w50" title="作者名">作者名</span>
+                        </li>
+                        <li>
+                            <span class="w50 novel-status">已完结</span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="novel-describe clearfix">
+                        <li>
+                            <span title="《书名》" class="w120">
+                                <a href="#">《书名》</a></span>
+                        </li>
+                        <li>
+                            <span class="w50" title="作者名">作者名</span>
+                        </li>
+                        <li>
+                            <span class="w50 novel-status">已完结</span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="novel-describe clearfix">
+                        <li>
+                            <span title="《书名》" class="w120">
+                                <a href="#">《书名》</a></span>
+                        </li>
+                        <li>
+                            <span class="w50" title="作者名">作者名</span>
+                        </li>
+                        <li>
+                            <span class="w50 novel-status">已完结</span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="novel-describe clearfix">
+                        <li>
+                            <span title="《书名》" class="w120">
+                                <a href="#">《书名》</a></span>
+                        </li>
+                        <li>
+                            <span class="w50" title="作者名">作者名</span>
+                        </li>
+                        <li>
+                            <span class="w50 novel-status">已完结</span>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <p class="browse-more"><a href="#">更多>></a></p>
+        </div>
+        <div class="subsection">
+            <p>此处放置</p>
+        </div>
+        <div class="subsection">
+            <p>此处放置</p>
+        </div>
+        <div class="subsection">
+            <p>此处放置</p>
+        </div>
+        <p class="browse-more"><a href="#">更多>></a></p>
+    </section>
+</article>
+</body>
+</html>

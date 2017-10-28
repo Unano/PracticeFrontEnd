@@ -1,0 +1,74 @@
+<!-- Created by LuoJing on 2017/7/6.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+<form action="#" name="register">
+    <fieldset>
+        <legend>必填项</legend>
+        <p>
+            <label for="account">账号</label>
+            <input type="text" name="account" id="account" class="required"/>
+        </p>
+        <p>
+            <label for="email">邮箱</label>
+            <input type="text" name="email" id="email" class="required"/>
+        </p>
+        <p>
+            <label for="password">密码</label>
+            <input type="password" name="password" id="password" class="required"/>
+        </p>
+        <p>
+            <label for="confirm_password">确认密码</label>
+            <input type="password" name="confirm_password" id="confirm_password" class="required"/>
+        </p>
+    </fieldset>
+    <fieldset>
+        <legend>选填项</legend>
+        <p>
+            <label>出生日期</label>
+            <select name="years" id="years">
+                <option value="">--</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2008">2008</option>
+            </select>
+            &nbsp;年
+            <select name="months" id="months">
+                <option value="">--</option>
+                <option value="0">1</option>
+                <option value="1">2</option>
+                <option value="2">3</option>
+                <option value="3">4</option>
+                <option value="4">5</option>
+                <option value="5">6</option>
+                <option value="6">7</option>
+                <option value="7">8</option>
+                <option value="8">9</option>
+                <option value="9">10</option>
+                <option value="10">11</option>
+                <option value="11">12</option>
+            </select>
+            &nbsp;月
+            <select name="days" id="days">
+                <option>--</option>
+            </select>
+            &nbsp;日
+        </p>
+        <label for = "hobby">兴趣爱好</label>
+        <input type="text" name="hobby" id="hobby">
+    </fieldset>
+    <p class="button">
+        <input type="submit" value="提交">&nbsp;&nbsp;
+        <input type="reset" value="重置">
+    </p>
+</form>
+<div class="test"></div>
+<script src="register.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas练习</title>
+</head>
+<body>
+this is a red square: <canvas id="picture" width="1000" height="600"></canvas>
+<script>
+    var canvas = document.getElementById("picture");
+    var context = canvas.getContext("2d");
+    context.fillStyle = "#f00";
+    context.fillRect(0,0,10,10);
+
+    canvas = document.getElementById("circle");
+    context = canvas.getContext("2d");
+    context.beginPath();
+    context.arc(5, 5, 5, 0, 2*Math.PI, true);
+    context.fillStyle = "#00f";
+    context.fill();
+</script>
+</body>
+</html>

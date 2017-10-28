@@ -1,0 +1,10 @@
+form{
+  width:500px;
+  height:500px;
+  margin:20% auto;
+}
+input.submit{
+  width:90px;
+  text-align:center;
+  margin-left:70px;
+}

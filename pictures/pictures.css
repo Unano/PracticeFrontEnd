@@ -1,0 +1,57 @@
+.img-nav{
+  width: 1000px;
+  height: 105px;
+  padding: 3px;
+  border: 1px solid #a6a6a6;
+  margin: 0 auto;
+}
+.img-article{
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #e8e8e8;
+  transition: all 3s;
+  -moz-transition: all 3s;
+  -webkit-transition: all 3s;
+
+}
+#placeholder{
+  max-width: 900px;
+  max-height: 460px;
+  display: block;/*使这个语句能够利用margin语句将图片居中，但是当属性值设置为inline-block时，居中属性都不能生效*/
+  margin: 10px auto;
+}
+#placeholder:hover{
+  transform: scale(1.4);
+  cursor: pointer;
+}
+
+#image_gallery a{
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 5px;
+}
+.thumbnail{
+  width: 100px;
+  border: 1px solid #c3bcbc;
+}
+.thumbnail:hover{
+  border: 2px solid #4ebcff;
+}
+#description{
+  margin: 0;
+}
+.big-arrow{
+  color: #fff;
+  font-size:100px;
+  margin: 150px 0;
+}
+.big-arrow:hover{
+  text-shadow: 2px 2px 2px #adadad;
+  cursor: pointer;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
