@@ -11,15 +11,19 @@
  */
 window.onload = main;
 function main(){
-    var w = 600,
+    var w = 400,
         h = 300,
         title = "测试标题测试标题",
-        html = "内容部分：你已经支付成功！试试很多字的情况试试很多字的情况试试很多字的情况试试很多字的情况"
-               +"内容部分：你已经支付成功！试试很多字的情况试试很多字的情况试试很多字的情况试试很多字的情况";
+        // s = "内容部分：你已经支付成功！试试很多字的情况试试很多字的情况试试很多字的情况试试很多字的情况"
+        //        +"内容部分：你已经支付成功！试试很多字的情况试试很多字的情况试试很多字的情况试试很多字的情况",
+        // html = [s];
+        html = "../../login/login.html";
+        btns = {
+            "按钮1": function(){ console.log("这是按钮1"); },
+            "按钮2": function(){ console.log("这是按钮2");}
+        };
 
-
-    popover(w, h, title, html);
-    console.log(isArray([]));
+    popover(w, h, title, html, btns);
 }
 function popover(width, height, title, html, btns, mask, move){
 //设置的宽高过大时默认为视口的宽高
@@ -46,24 +50,58 @@ function popover(width, height, title, html, btns, mask, move){
     tle.className = "popw-title";
     tle.innerHTML = "<span>" + title + "</span><span style='position: absolute; right: 10px; cursor: pointer;' id='close'>X</span>";
     pop_win.appendChild(tle);
+    var cls = document.getElementById("close");
+    cls.onclick = function(){
+        rmvChild(pop_win);
+    };
     //内容部分
-    var cnt = createEle("div");
-    var cntp = createEle("p");
-    cntp.innerHTML = html;
-      //将元素的行高设置为包含它的块级元素的高度，只有单行文本时有用
-      // cntp.style.cssText = "display: inline-block;line-height:" +(height - 70) +"px; margin: 0;";
-      //文本很多时，将包含它的块级元素的display设置为table,模仿表单元素来设置
-    cntp.style.cssText = "display: table-cell;vertical-align:middle;padding: 5px;";
-    cnt.appendChild(cntp);
+    var cnt = createEle("div"),
+        cntw = width - 4,
+        cnth = height - 70;
+
+    if(isArray(html)) {
+        var cntp = createEle("p");
+        cntp.innerHTML = html[0];
+        //将元素的行高设置为包含它的块级元素的高度，只有单行文本时有用
+        // cntp.style.cssText = "display: inline-block;line-height:" +(height - 70) +"px; margin: 0;";
+        //文本很多时，将包含它的块级元素的display设置为table,模仿表单元素来设置
+        cntp.style.cssText = "display: table-cell;vertical-align:middle;padding: 5px;";
+        cnt.appendChild(cntp);
+    }
+    if(typeof html == "string"){
+        var cnti = createEle("iframe");
+        cnti.style.cssText = "width: " + cntw + "px" +
+                             "height: " + cnth + "px;";
+        cnti.src = html;
+        cnt.appendChild(cnti);
+    }
     cnt.className = "popw-cnt";
-    cnt.style.cssText = "width: " + width - 4 +"px;"+
-                        "height: " + (height - 70) + "px;";
-    console.log(height - 20);
+    cnt.style.cssText = "width: " + cntw +"px;"+
+                        "height: " + cnth + "px;";
     pop_win.appendChild(cnt);
     //按钮部分
-    var btn = createEle("div");
-    btn.className = "popw-btn";
+    var btons = createEle("div");
+    btons.style.cssText = "height:40px; margin-left: " + width/2.7 + "px;display: table;";
+    pop_win.appendChild(btons);
+    //按钮的个数是不定的，如果要居中首先得知道所有按钮加起来占的宽度。这里只以两个按钮为标准实现居中
+    var buttons = [], i = 0;
+    for(var name in btns){
+        buttons[i] = createEle("div");
+        buttons[i].className = "popw-btn";
+        buttons[i].innerHTML = "<span class='btn_cnt'>" + name + "</span>";
+        (function(i){
+            buttons[i].onclick = btns[name]; //这里只能用“[]”的方式来访问属性的值，因为使用了属性名来作为按钮的内容，属性名所包含的的字符的格式不确定
+        })(i); //使用立即调用函数的写法来保护变量i
+        i++;
+    }
+    console.log(buttons);
+    var btn_len = buttons.length;
+    for(var n = 0; n < btn_len; n++){
+        btons.appendChild(buttons[n]);
+    }
+
 //遮罩层
+
 }
 //查询窗口的视口尺寸
 function getViewPortSize(w){

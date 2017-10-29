@@ -9,7 +9,23 @@
   background-color: white;
   margin: 0 2px;
   text-align: center;
+  display: table;
 }
 .popw-cntp{
   display: inline-block;
+}
+.popw-btn{
+  background-color: white;
+  height: 30px;
+  float: left;
+  text-align: center;
+  display: table;
+  margin: 5px;
+  border-radius: 5px;
+  padding: 0 2px;
+  cursor: pointer;
+}
+.btn_cnt{
+  display: table-cell;
+  vertical-align: middle;
 }
