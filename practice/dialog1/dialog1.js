@@ -11,19 +11,21 @@
  */
 window.onload = main;
 function main(){
-    var w = 400,
-        h = 300,
+    var w = 200,
+        h = 200,
         title = "测试标题测试标题",
         // s = "内容部分：你已经支付成功！试试很多字的情况试试很多字的情况试试很多字的情况试试很多字的情况"
         //        +"内容部分：你已经支付成功！试试很多字的情况试试很多字的情况试试很多字的情况试试很多字的情况",
         // html = [s];
-        html = "../../login/login.html";
-        btns = {
-            "按钮1": function(){ console.log("这是按钮1"); },
-            "按钮2": function(){ console.log("这是按钮2");}
-        };
+        html = "../../login/login.html",
+        // btns = {
+        //     "按钮1": function(){ console.log("这是按钮1"); },
+        //     "按钮2": function(){ console.log("这是按钮2");}
+        // },
+        btns = {},
+        mask = "true";
 
-    popover(w, h, title, html, btns);
+    popover(w, h, title, html, btns, mask );
 }
 function popover(width, height, title, html, btns, mask, move){
 //设置的宽高过大时默认为视口的宽高
@@ -37,7 +39,7 @@ function popover(width, height, title, html, btns, mask, move){
     }
 //弹窗
     var pop_win = createEle("div");
-    pop_win.style.cssText = "position: absolute; " +
+    pop_win.style.cssText = "position: absolute; z-index: 1001;" +
                             "width: " + width + "px;" +
                             "height: " + height + "px;" +
                             "top: "+ (wh - height)/2 + "px;" +
@@ -53,7 +55,32 @@ function popover(width, height, title, html, btns, mask, move){
     var cls = document.getElementById("close");
     cls.onclick = function(){
         rmvChild(pop_win);
+        rmvChild(msk);
     };
+    //移动
+    tle.onmousedown = function(){ //获取鼠标按下时的鼠标焦点坐标及窗口左上角的坐标
+        var moveable = true;
+        var mus_x = event.clientX,
+            mus_y = event.clientY,
+            win_x = parseInt(pop_win.style.left),
+            win_y = parseInt(pop_win.style.top);
+        console.log(mus_x, mus_y);
+        tle.onmouseover = function(){ //根据鼠标移动时的鼠标来重新设置窗口左上角坐标
+            if(moveable == true){
+                var new_x = win_x + event.clientX - mus_x,
+                    new_y = win_y + event.clientY - mus_y;
+                var jug = new_x > 0 && new_y > 0 && (new_x + width < ww )&& (new_y + height < wh);
+                if(jug){
+                    pop_win.style.left = new_x + "px";
+                    pop_win.style.top = new_y + "px";
+                }
+            }
+        };
+        tle.onmouseup = function(){ //鼠标移出标题部分时就不能移动了
+            moveable = false;
+        };
+    };
+
     //内容部分
     var cnt = createEle("div"),
         cntw = width - 4,
@@ -65,14 +92,21 @@ function popover(width, height, title, html, btns, mask, move){
         //将元素的行高设置为包含它的块级元素的高度，只有单行文本时有用
         // cntp.style.cssText = "display: inline-block;line-height:" +(height - 70) +"px; margin: 0;";
         //文本很多时，将包含它的块级元素的display设置为table,模仿表单元素来设置
-        cntp.style.cssText = "display: table-cell;vertical-align:middle;padding: 5px;";
+        cntp.style.cssText = "display: table-cell;vertical-align:middle;padding: 5px;overflow: auto;";
         cnt.appendChild(cntp);
     }
     if(typeof html == "string"){
         var cnti = createEle("iframe");
-        cnti.style.cssText = "width: " + cntw + "px" +
-                             "height: " + cnth + "px;";
         cnti.src = html;
+        //直接使用cnti.style.cssText来设置iframe的样式失败了
+        //cnti.style.cssText = "width: " + cntw + "px" +
+        //                     "height: " + cnth + "px;";
+        cnti.setAttribute("scrolling", "no");
+        cnti.setAttribute("frameborder", 0);
+        cnti.style.width = cntw + "px";
+        cnti.style.height = cnth + "px";
+        cnti.style.overflow = "auto";
+
         cnt.appendChild(cnti);
     }
     cnt.className = "popw-cnt";
@@ -94,13 +128,21 @@ function popover(width, height, title, html, btns, mask, move){
         })(i); //使用立即调用函数的写法来保护变量i
         i++;
     }
-    console.log(buttons);
     var btn_len = buttons.length;
     for(var n = 0; n < btn_len; n++){
         btons.appendChild(buttons[n]);
     }
 
 //遮罩层
+    if(mask === "true"){
+        var msk = document.createElement("div");
+        msk.style.cssText = "width: 100%; height: 100%;" +
+                             "position: absolute; z-index: 1000;" +
+                             "top: 0; right: 0;" +
+                             "background-color: rgba(128, 128, 128, 0.1);";
+        apdChild(msk);
+    }
+
 
 }
 //查询窗口的视口尺寸
