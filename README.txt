@@ -6,4 +6,3 @@
 2、其他
 （1）、This project is for practicing how to use JavaScript and Git.
 （2）、It refers to some websites and books.
-（3）、My English is poor, maybe I can't describe things well.
