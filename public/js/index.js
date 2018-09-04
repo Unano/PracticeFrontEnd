@@ -81,7 +81,7 @@ function pictureDetails(){
     var pic_div = getElementsByClassName(pictures,"picture-describe");
     for(var i=0;i<pic_div.length;i++){
         pic_div[i].onclick = function(){
-            location.href = "../pictures/picture/picture.html ";
+            location.href = "picture.html ";
             console.log("aaa");
         }
     }
