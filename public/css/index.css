@@ -1,35 +1,46 @@
-body{
-  font-family:"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu,sans-serif;
-  background-color: rgba(243,243,251,0.3);
-  min-width: 1366px;
-}
+
 /*处理浮动造成的影响*/
-.clearfix:after{
+.clearfix:after  {
   content: ".";
   display: block;
   height: 0;
   clear: both;
   visibility: hidden;
 }
-header{
+header {
   position: relative;
+  background-image: url('/static/img/banner.png');
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+  z-index: 2;
 }
-.image{
+article {
+  width: 1207px;
+  margin: 0 auto;
+  z-index: 1;
+}
+.head-nav {
+  width: 1207px;
+  margin: 0 auto;
+  padding: 5px 0;
+}
+.image {
   max-width: 100%;
   max-height: 100%;
   margin: 0 auto;
   z-index: -100;
 }
-.website-name{
+.website-name {
   font-size: 26px;
   text-shadow: 2px 2px 2px #3A3C7F;
   color: white;
   position: absolute;
   top: 15px;
-  left: 127px;
+  left: 20%;
   letter-spacing: 5px;
 }
-input{
+input {
   background: white;
   font-size: 18px;
   line-height: 1.6;
@@ -37,72 +48,55 @@ input{
   border-radius: 2px;
 
 }
-.button{
+.search {
+  width: 250px;
+}
+.button {
   margin-left: 0;
   background-color: #449dd6;
   color: white;
+  width: 60px;
 }
-.header-search{
+.header-search {
   position: absolute;
   top: 200px;
   left: 54%;
 }
-.header-search input{
+.header-search input {
   padding-left: 10px;
+  height: 35px;
 }
-.fuzz-match{
+.fuzz-match {
+  position: absolute;
   list-style-type: none;
   background: white;
-  width: 80%;
+  width: 250px;
   visibility: hidden;
+  box-sizing: border-box;
+  padding: 0 5px;
 }
-.fuzz-match li{
+.fuzz-match li {
   border-bottom: 1px solid #bdb9b9;
-  padding: 2px 2px 2px 10px;
-  margin: 2px;
+  padding: 8px 5px;
 }
-.fuzz-match a{
+.fuzz-match li:last-child {
+  height: 12px;
+  border-bottom: none;
+}
+.fuzz-match a {
   text-decoration: none;
   color: #5f5c5c;
 }
-#fm_close{
+#fm_close {
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
   display: inline-block;
   padding-left: 200px;
   font-size: 15px;
 }
-article{
-  margin: 0 5%;
-}
-ul{
-  padding: 0;
-  margin: 2px 0;
-}
-.partition li{
-  width: 14%;
-  border: 1px solid white;
-  text-align: center;
-  background-color: #79acd6;
-  list-style: none;
-  float: left;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-}
 
-.partition a{
-  display: inline-block;
-  text-decoration: none;
-  padding: 5px;
-  font-weight: bold;
-  font-size: 18px;
-  color: white;
-}
-.partition a:hover{
-  color: #fdff7a;
-  cursor: pointer;
-}
-#suff_imgs{
-  float: left;
+#suff_imgs {
   position: relative;
   display: inline-block;
   width: 600px;
@@ -110,19 +104,19 @@ ul{
   overflow: hidden;
   margin-right: 10px;
 }
-#img_list{
+#img_list {
   position: relative;/*只有对于值不为static（默认值）的position，left和top等才会起效*/
   width: 1800px;/*将图片放成一个横排*/
   height: 225px;
   margin: 6px 4px 0 0;
   float: left;
 }
-#img_list img{
+#img_list img {
   float: left;
   max-width: 600px;
   border-radius: 5px;
 }
-#img_dots{
+#img_dots {
   position: absolute;
   z-index: 10;
   top: 200px;
@@ -130,7 +124,7 @@ ul{
   height: 10px;
   width: 100px;
 }
-#img_dots span{
+#img_dots span {
   display: inline-block;
   width: 8px;
   height: 8px;
@@ -141,11 +135,11 @@ ul{
   opacity: 0.9;
   cursor: pointer;
 }
-#img_dots span.on{
+#img_dots span.on {
   width: 30px;
   border-radius: 5px;
 }
-.arrow{
+.arrow {
   position: absolute;
   top: 100px;
   color: #f1dddd;
@@ -153,29 +147,48 @@ ul{
   height: 28px;
   text-align:center;
   background-color: rgba(0,0,0,0.3);
-  font-size: 20px;
-  font-weight: bold;
   text-decoration: none;
   z-index: 10;
   cursor: pointer;
   display: none;
 }
-#suff_imgs:hover .arrow{
+.arrow:after {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 28px;
+}
+.arrow.next:after {
+  content: ">";
+}
+.arrow.prev:after {
+  content: "<";
+}
+
+#suff_imgs:hover .arrow {
   display: block;
 }
-.arrow:hover{
+.arrow:hover {
   color: #fff;
 }
-#prev{
+#prev {
   left: 0;
 }
-#next{
+#next {
   right: 0;
 }
-.top3{
+.top-content {
   position: relative;
+}
+.top3 {
+  display: inline-block;
+  position: absolute;
+  top: 30px;
+}
+.top-card {
+  position: relative;
+  display: inline-block;
   margin: 6px 3px 0 3px;
-  float:left;
   width: 190px;
   height: 190px;
   overflow: hidden;
@@ -190,7 +203,7 @@ ul{
   /*border-radius: 10px;*/
   /*-moz-border-radius: 10px;!*old FireFox*!*/
 }
-.long-p{
+.long-p {
   color: #fff;
   font-size: 0.95em;
   width: 190px;
@@ -214,64 +227,93 @@ ul{
   */
   background:rgba(0, 0, 0, 0.7); /* 一些不支持背景渐变的浏览器 */
   background:-moz-linear-gradient(top,  rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7));/*top表示从上到下的渐变*/
-  background:-webkit-gradient(linear, 0 0, 0 bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.7)));
+  background:-webkit-linear-gradient(linear, 0 0, 0 bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.7)));
   background:-o-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7));
 }
-.post-img{
+.post-img {
   width: 190px;
   height: 190px;
   border-radius: 5px;
 }
-.post-img:hover{
+.post-img:hover {
   overflow: hidden;
   transform: scale(1.4);/*表示当鼠标放到图像上时，图片按比例放大1.4倍*/
 }
-
-.browse-more{
+section > .browse-more {
   display: inline-block;
-  float: right;
+  position: absolute;
+  top: 10px;
+  right: 0;
   margin: 0 25px;
 }
-section{
+.subsection > .browse-more {
+  position: absolute;
+  right: -16px;
+  bottom: 8px;
+  font-size: 15px;
+}
+.browse-more {
+  display: inline-block;
+  margin: 0 25px;
+}
+section {
   position: relative;
   margin-top: 10px;
   clear: both;
   width: 100%;
-  height: 30%;
 }
-.subsection{
+.subsection {
   position: relative;
-  width: 230px;
+  width: 231px;
   height: 250px;
   margin: 4px 4px;
   background-color: rgba(121,172,214,0.1);
-  float: left;
+  display: inline-block;
   border-radius: 5px;
 }
-.subsection ul{
+.subsection:last-child {
+  margin-right: 0;
+}
+.subsection ul {
   list-style-type: none;
   margin: 5px 2px;
 }
-.hide{
+.hide {
   visibility: hidden;
 }
-.novel-describe li{
+.novel-describe li {
   float: left;
   font-size: 0.95em;
 }
-.novel-describe span{
+.novel-describe span {
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  line-height: 20px;
 }
-.w120{
+.novel-list {
+  height: 170px;
+  overflow: hidden;
+}
+.novel-status {
+  color: #fff;
+  font-size: 14px;
+  background-color: #7cb0ff;
+  border-radius: 3px;
+  text-align: center;
+  vertical-align: middle;
+}
+.novel-status.serializing {
+  background-color: #50c178;
+}
+.w120 {
   width: 120px;
 }
-.w50{
+.w50 {
   width: 50px;
 }
-section h1{
+section h1 {
   width: 40px;
   padding: 5px;
   font-size: 18px;
@@ -283,7 +325,7 @@ section h1{
   border-radius: 50px;
 }
 /*气泡底部的小三角形*/
-.trang{
+.triangle {
   position: absolute;
   top: 34px;
   left: 25px;
@@ -294,7 +336,7 @@ section h1{
   border-color: #79acd6 transparent transparent transparent;
 
 }
-section h2{
+section h2 {
   line-height: 1.6em;
   padding: 0 8px 0 8px;
   margin: 8px 5px;
@@ -303,35 +345,25 @@ section h2{
   font-weight: 500;
   border-bottom: 1px solid #79acd6;
 }
-.novel-list{
-  height: 170px;
-  overflow: hidden;
-}
-.novel-status{
-  font-size: 14px;
-  background-color: #f4ff25;
-  border-radius: 5px;
-  text-align: center;
-}
-.picture-post{
+.picture-post {
   height: 175px;
   overflow: hidden;
   position: relative;
 }
-.post-picture{
+.post-picture {
   width: 220px;
   height: 170px;
   display: block;
   margin: 0 auto;
   border-radius: 5px;
 }
-.picture-post .long-p{
+.picture-post .long-p {
   position: absolute;
   top: 125px;
   left: 5px;
   width: 220px;
 }
-.picture-describe{
+.picture-describe {
   position: absolute;
   top: 0;
   left: 5px;
@@ -344,15 +376,15 @@ section h2{
   display: none;
   cursor: pointer;
 }
-.picture-post:hover .long-p{ /*这个效果能够实现，而.picture-post类和.long-p类是兄弟元素*/
+.picture-post:hover .long-p { /*这个效果能够实现，而.picture-post类和.long-p类是兄弟元素*/
   display: none;
 }
-.picture-post:hover .picture-describe{
+.picture-post:hover .picture-describe {
   display: block;
 }
-.picture-describe p{
+.picture-describe p {
   margin: 2px;
 }
-.describe-content{
+.describe-content {
   margin: 20px;
 }

@@ -1,6 +1,3 @@
-/**
- * Created by LuoJing on 2017/8/29.
- */
 window.onload = main;
 function main(){
     var submit_btn = document.getElementById("submit");

@@ -1,6 +1,3 @@
-/**
- * Created by LuoJing on 2017/8/5.
- */
 window.onload = initForm;
 
 var g_years = document.getElementById("years");

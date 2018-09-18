@@ -1,20 +1,20 @@
-.popw-title{
+.popw-title {
   display: inline-block;
   color: white;
   padding: 5px;
   height: 20px;
   cursor: move;
 }
-.popw-cnt{
+.popw-cnt {
   background-color: white;
   margin: 0 2px;
   text-align: center;
   display: table;
 }
-.popw-cntp{
+.popw-cntp {
   display: inline-block;
 }
-.popw-btn{
+.popw-btn {
   background-color: white;
   height: 30px;
   float: left;
@@ -25,7 +25,7 @@
   padding: 0 2px;
   cursor: pointer;
 }
-.btn_cnt{
+.btn_cnt {
   display: table-cell;
   vertical-align: middle;
 }

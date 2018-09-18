@@ -1,6 +1,3 @@
-/**
- * Created by LuoJing on 2017/8/22.
- */
 addLoadEvent(deleteCollect);
 
 function deleteCollect(){

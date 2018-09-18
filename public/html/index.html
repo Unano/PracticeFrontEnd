@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>网</title>
+    <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" type="text/css" href="index.css">
     <script type="text/javascript" src="index.js"></script>
 </head>
 <body class="index-page">
+<nav class="head-nav">
+    <a href="login.html">登录</a>|
+    <a href="register.html">注册</a>
+    <a href="mine.html">我的</a>
+</nav>
 <header>
-    <nav class="head-nav">
-        <a href="login.html">登录</a>|
-        <a href="register.html">注册</a>
-        <a href="mine.html">我的</a>
-    </nav>
     <div class="website-name"><h2>练练网</h2></div>
-    <img src="/static/img/banner.png" class="image">
     <div class="header-search"><input type="search" placeholder="输入关键词" class="search" id="search">
         <input type="button" value="搜索" class="button" id="search_btn">
         <ul class="fuzz-match">
@@ -39,7 +39,7 @@
         <li><a href="#">榜</a></li>
     </ul>
     </nav>
-    <section class="clearfix">
+    <section class="top-content">
         <div id="suff_imgs">
             <div id="img_list" style="left:0;">
                 <img src="/static/img/suffling/1.png"  alt="1">
@@ -51,26 +51,29 @@
                 <span index="2"></span>
                 <span index="3"></span>
             </div>
-            <span id="prev" class="arrow">&lt;</span>
-            <span id="next" class="arrow">&gt;</span>
-        </div>
-        <div class="top3">
-            <img src="/static/img/sky.png" class="post-img" alt="top1的封面图片"/>
-            <p class="long-p">此处放置的是榜单模块的内容，点击下方的更多能够查看榜单</p>
-        </div>
-        <div class="top3">
-            <img src="/static/img/sky.png" class="post-img" alt="top2的封面图片"/>
-            <p class="long-p">当类为top3的元素中不包含任何值时，背景颜色不会生效</p>
-        </div>
-        <div class="top3">
-            <img src="/static/img/sky.png" class="post-img" alt="top3的封面图片"/>
-            <p class="long-p">当类为top3的元素中不包含任何值时，背景颜色不会生效</p>
+            <span id="prev" class="arrow prev"></span>
+            <span id="next" class="arrow next"></span>
         </div>
         <p class="browse-more"><a href="#">更多>></a></p>
+        <div class="top3">
+            <div class="top-card">
+                <img src="/static/img/sky.png" class="post-img" alt="top1的封面图片"/>
+                <p class="long-p">此处放置的是榜单模块的内容，点击下方的更多能够查看榜单</p>
+            </div>
+            <div class="top-card">
+                <img src="/static/img/sky.png" class="post-img" alt="top2的封面图片"/>
+                <p class="long-p">当类为top3的元素中不包含任何值时，背景颜色不会生效</p>
+            </div>
+            <div class="top-card">
+                <img src="/static/img/sky.png" class="post-img" alt="top3的封面图片"/>
+                <p class="long-p">当类为top3的元素中不包含任何值时，背景颜色不会生效</p>
+            </div>
+        </div>
     </section>
     <section id="pictures">
         <h1>图</h1>
-        <span class="trang"></span>
+        <span class="triangle"></span>
+        <span class="browse-more"><a href="#">更多>></a></span>
         <div class="subsection">
             <h2>原创</h2>
             <div class="picture-post">
@@ -151,11 +154,11 @@
             </div>
             <p class="browse-more"><a href="#">更多>></a></p>
         </div>
-        <p class="browse-more"><a href="#">更多>></a></p>
     </section>
     <section>
         <h1>文</h1>
-        <span class="trang"></span>
+        <span class="triangle"></span>
+        <span class="browse-more"><a href="#">更多>></a></span>
         <div class="subsection">
             <h2>现代</h2>
             <ul class="novel-list">
@@ -169,7 +172,7 @@
                             <span class="w50" title="作者名">作者名</span>
                         </li>
                         <li>
-                            <span class="w50 novel-status">连载中</span>
+                            <span class="w50 novel-status serializing">连载中</span>
                         </li>
                     </ul>
                 </li>
@@ -183,7 +186,7 @@
                             <span class="w50" title="很长的作者名">很长的作者名</span>
                         </li>
                         <li>
-                            <span class="w50 novel-status">连载中</span>
+                            <span class="w50 novel-status serializing">连载中</span>
                         </li>
                     </ul>
                 </li>
@@ -231,7 +234,7 @@
                             <span class="w50" title="作者名">作者名</span>
                         </li>
                         <li>
-                            <span class="w50 novel-status">连载中</span>
+                            <span class="w50 novel-status serializing">连载中</span>
                         </li>
                     </ul>
                 </li>
@@ -245,7 +248,7 @@
                             <span class="w50" title="很长的作者名">很长的作者名</span>
                         </li>
                         <li>
-                            <span class="w50 novel-status">连载中</span>
+                            <span class="w50 novel-status serializing">连载中</span>
                         </li>
                     </ul>
                 </li>
@@ -277,62 +280,13 @@
                         </li>
                     </ul>
                 </li>
-                <li>
-                    <ul class="novel-describe clearfix">
-                        <li>
-                            <span title="《书名》" class="w120">
-                                <a href="novel.html">《书名》</a></span>
-                        </li>
-                        <li>
-                            <span class="w50" title="作者名">作者名</span>
-                        </li>
-                        <li>
-                            <span class="w50 novel-status">已完结</span>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <ul class="novel-describe clearfix">
-                        <li>
-                            <span title="《书名》" class="w120">
-                                <a href="novel.html">《书名》</a></span>
-                        </li>
-                        <li>
-                            <span class="w50" title="作者名">作者名</span>
-                        </li>
-                        <li>
-                            <span class="w50 novel-status">已完结</span>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <ul class="novel-describe clearfix">
-                        <li>
-                            <span title="《书名》" class="w120">
-                                <a href="novel.html">《书名》</a></span>
-                        </li>
-                        <li>
-                            <span class="w50" title="作者名">作者名</span>
-                        </li>
-                        <li>
-                            <span class="w50 novel-status">已完结</span>
-                        </li>
-                    </ul>
-                </li>
             </ul>
             <p class="browse-more"><a href="#">更多>></a></p>
         </div>
-        <div class="subsection">
-            <p>此处放置</p>
-        </div>
-        <div class="subsection">
-            <p>此处放置</p>
-        </div>
-        <div class="subsection">
-            <p>此处放置</p>
-        </div>
-        <p class="browse-more"><a href="#">更多>></a></p>
     </section>
 </article>
+<footer>
+  &copy;&nbsp;Unano
+</footer>
 </body>
 </html>

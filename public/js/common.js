@@ -1,3 +1,3 @@
-window.onload = function () {
-  console.log('aaa')
+export const name = function () {
+  return 'Unano'
 }

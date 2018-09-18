@@ -1,14 +1,11 @@
 /**
- * Created by LuoJing on 2017/10/28.
- */
-/*
 * width, height表示弹窗的宽高
 * title表示弹窗的标题
 * html为一个字符串时表示一个html的路径，为一个数组时表示纯文本
 * btns为一个对象，格式为{btn1: func1; brn2: func2}，表示按钮以及按钮对应的方程
 * mask为一个布尔值，为true时表示创建一个遮罩层， 为false时表示不创建遮罩层
 * move 为一个布尔值，为true时表示窗口可移动，为false表示窗口不可移动
- */
+*/
 window.onload = main;
 function main(){
     var w = 200,

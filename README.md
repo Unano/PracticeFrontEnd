@@ -5,7 +5,7 @@
 
 ``` bash
 # run dev server
-node dev-server
+npm start
 
 ```
 

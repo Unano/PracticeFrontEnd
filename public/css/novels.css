@@ -1,43 +1,43 @@
-.cover{
+.cover {
   width: 150px;
   height: 200px;
   display: inline-block;
 }
-.novel-profile{
+.novel-profile {
   float: left;
 }
-.novel-copywriting{
+.novel-copywriting {
   width: 85%;
   float: right;
 }
-.novel-chapters{
+.novel-chapters {
   clear: both;
   width: 90%;
   margin: 0 auto;
 }
-.novel-chapters table{
+.novel-chapters table {
   border-collapse: collapse;
 }
-.novel-chapters td,.novel-chapters th{
+.novel-chapters td,.novel-chapters th {
   padding: 5px;
   border: 1px solid black;
   /*border-collapse: collapse;*/
 }
-td:first-child,th:first-child{
+td:first-child,th:first-child {
   text-align: center;
 }
-.novel-title{
+.novel-title {
   font-weight: bold;
 }
-.td-nv-title{
+.td-nv-title {
   width: 100px;
 }
-.td-nv-abstract{
+.td-nv-abstract {
   width: 300px;
 }
-.account{
+.account {
   width: 100px;
 }
-.time-title{
+.time-title {
   width: 300px;
 }

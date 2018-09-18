@@ -1,0 +1,25 @@
+{
+  "name": "practicefrontend",
+  "version": "0.0.1",
+  "description": "a project to practice javascript and node",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Unano/practiceFrontEnd.git"
+  },
+  "keywords": [
+    "javascript",
+    "node"
+  ],
+  "author": "Unano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Unano/practiceFrontEnd/issues"
+  },
+  "homepage": "https://github.com/Unano/practiceFrontEnd#readme",
+  "dependencies": {}
+}

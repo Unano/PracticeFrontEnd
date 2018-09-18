@@ -3,6 +3,7 @@ const http = require('http')
 const path = require('path')
 const url = require('url')
 const fs = require('fs')
+const cp = require('child_process')
 const mine = require('./mime')
 const config = require('./config')
 
@@ -48,6 +49,7 @@ const server = http.createServer(function (req, res) {
   })
 })
 
-server.listen(config.port)
-
-console.log('Server runing at: ', `http://localhost:${config.port}`)
+server.listen(config.port, () => {
+  console.log('Server runing at: ', `http://localhost:${config.port}`)
+  cp.exec(`open http://localhost:${config.port}`)
+})

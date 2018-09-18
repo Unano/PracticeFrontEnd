@@ -1,23 +1,27 @@
-form{
+form {
   width: 80%;
   margin: 0 auto;
 }
-fieldset{
+fieldset {
   display:inline-block;
   width:40%;
   float:left;
   margin:20px;
 }
-.button{
+.button {
   clear: both;
-  width: 100px;
-  margin:0 auto;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
 }
-input.invalid{
+.button span {
+  margin-right: 20px;
+}
+input.invalid {
   background-color: #ff9;
   border: 2px red inset;
 }
-.test{
+.test {
   box-sizing:border-box;
   /*
   content-box:宽度和高度分别应用到元素的内容框

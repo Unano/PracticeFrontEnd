@@ -1,6 +1,3 @@
-/**
- * Created by LuoJing on 2017/7/2.
- */
 addLoadEvent(arrowChange);
 addLoadEvent(pictureDetails);
 addLoadEvent(fmClk);
@@ -94,7 +91,7 @@ function fmClk(){
     var fm_close = document.getElementById("fm_close");
     fm_close.onclick = function(){
         var ul = document.getElementsByClassName("fuzz-match")[0];
-        ul.style.display = "none";
+        ul.style.visibility = "hidden";
         event.preventDefault();
     };
 }

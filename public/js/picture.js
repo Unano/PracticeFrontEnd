@@ -1,7 +1,3 @@
-/**
- * Created by LuoJing on 2017/8/23.
- */
-
 // addLoadEvent(turnPage);
 // addLoadEvent(prepareGallery);
 //用以上方式添加事件，发现只有后面调用的函数才起到了作用，按理说addLoadEvent函数已经将要执行的函数创建为一个队列了才是
